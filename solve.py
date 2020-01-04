@@ -11,8 +11,9 @@ Where:
  N1 - N4 cannot share the same digit
 """
 
-from typing import Iterable, Optional
+from typing import Iterable
 from typing import List
+from typing import Optional
 
 
 class Combination:
@@ -28,7 +29,7 @@ class Combination:
     def __str__(self):
         return f'  {self.n1:03} * {self.n2:02} = {self.n12}\n' \
                f'- {self.n3:03} * {self.n4:02} = {self.n34}\n' \
-               f'           = {self.value}\n'
+               f'           = {self.value}'
 
     def __le__(self, other):
         return self.value <= other.value
